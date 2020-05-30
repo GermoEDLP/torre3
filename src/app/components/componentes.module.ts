@@ -14,6 +14,7 @@ import { ServicesComponent } from './services/services.component';
 import { TeamComponent } from './team/team.component';
 import { TopBarsComponent } from './top-bars/top-bars.component';
 import { CardsComponent } from './cards/cards.component';
+import { PortfolioProjectComponent } from './portfolio-project/portfolio-project.component';
 
 
 
@@ -30,7 +31,8 @@ import { CardsComponent } from './cards/cards.component';
     ServicesComponent,
     TeamComponent,
     TopBarsComponent,
-    CardsComponent
+    CardsComponent,
+    PortfolioProjectComponent
   ],
   imports: [
     CommonModule
