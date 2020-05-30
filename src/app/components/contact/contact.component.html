@@ -1,148 +1,138 @@
 <section
-id="contact"
-class="contact"
+  id="contact"
+  class="contact"
 >
-<div class="container">
-  <div class="section-title">
-    <span>Contact</span>
+  <div class="container">
+    <div class="section-title">
+      <span>Contacto</span>
 
-    <h2>Contact</h2>
+      <h2>Contacto</h2>
 
-    <p>
-      Sit sint consectetur velit quisquam cupiditate impedit suscipit alias
-    </p>
-  </div>
+      <p>
+        Déjanos tus preguntas y nos comunicaremos a la brevedad.
+      </p>
+    </div>
 
-  <div
-    class="row"
-    data-aos="fade-up"
-  >
-    <div class="col-lg-6">
-      <div class="info-box mb-4">
-        <i class="bx bx-map"></i>
+    <div
+      class="row"
+      data-aos="fade-up"
+    >
+      <div class="col-lg-6">
+        <div class="info-box mb-6">
+          <i class="bx bx-map"></i>
 
-        <h3>Our Address</h3>
+          <h3>Ubicacion</h3>
 
-        <p>
-          A108 Adam Street, New York, NY 535022
-        </p>
+          <p>
+            La Plata, Buenos Aires, Argentina
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6">
+        <div class="info-box  mb-4">
+          <i class="bx bx-envelope"></i>
+
+          <h3>Email</h3>
+
+          <p>torretres.dev@gmail.com</p>
+        </div>
       </div>
     </div>
 
-    <div class="col-lg-3 col-md-6">
-      <div class="info-box  mb-4">
-        <i class="bx bx-envelope"></i>
+    <div
+      class="row"
+      data-aos="fade-up"
+    >
+      <div class="col-lg-6">
 
-        <h3>Email Us</h3>
-
-        <p>contact@example.com</p>
+        <iframe
+          class="mb-4 mb-lg-0"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52343.025421095655!2d-57.98818998788949!3d-34.92052327672038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e62b1f0085a1%3A0xbcfc44f0547312e3!2sLa%20Plata%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1590787874164!5m2!1ses-419!2sar"
+          width="100%"
+          height="384px"
+          frameborder="0"
+          style="border:0;"
+          allowfullscreen="allowfullscreen"
+        ></iframe>
       </div>
-    </div>
 
-    <div class="col-lg-3 col-md-6">
-      <div class="info-box  mb-4">
-        <i class="bx bx-phone-call"></i>
+      <div class="col-lg-6">
+        <form
+          class="php-email-form"
+        >
+          <div class="form-row">
+            <div class="col-md-6 form-group">
+              <input
+                type="text"
+                name="name"
+                class="form-control"
+                id="name"
+                placeholder="Tu nombre"
+                data-rule="minlen:4"
+                data-msg="Please enter at least 4 chars"
+              >
 
-        <h3>Call Us</h3>
+              <div class="validate"></div>
+            </div>
 
-        <p>+1 5589 55488 55</p>
-      </div>
-    </div>
-  </div>
+            <div class="col-md-6 form-group">
+              <input
+                type="email"
+                class="form-control"
+                name="email"
+                id="email"
+                placeholder="Tu Email"
+                data-rule="email"
+                data-msg="Please enter a valid email"
+              >
 
-  <div
-    class="row"
-    data-aos="fade-up"
-  >
-    <div class="col-lg-6">
-      <iframe
-        class="mb-4 mb-lg-0"
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-        frameborder="0"
-        style="border:0; width: 100%; height: 384px;"
-        allowfullscreen="allowfullscreen"
-      ></iframe>
-    </div>
+              <div class="validate"></div>
+            </div>
+          </div>
 
-    <div class="col-lg-6">
-      <form
-        action="forms/contact.php"
-        method="post"
-        role="form"
-        class="php-email-form"
-      >
-        <div class="form-row">
-          <div class="col-md-6 form-group">
+          <div class="form-group">
             <input
               type="text"
-              name="name"
               class="form-control"
-              id="name"
-              placeholder="Your Name"
+              name="subject"
+              id="subject"
+              placeholder="Asunto"
               data-rule="minlen:4"
-              data-msg="Please enter at least 4 chars"
+              data-msg="Please enter at least 8 chars of subject"
             >
 
             <div class="validate"></div>
           </div>
 
-          <div class="col-md-6 form-group">
-            <input
-              type="email"
+          <div class="form-group">
+            <textarea
               class="form-control"
-              name="email"
-              id="email"
-              placeholder="Your Email"
-              data-rule="email"
-              data-msg="Please enter a valid email"
-            >
+              name="message"
+              rows="5"
+              data-rule="required"
+              data-msg="Please write something for us"
+              placeholder="Mensaje"
+            ></textarea>
 
             <div class="validate"></div>
           </div>
-        </div>
 
-        <div class="form-group">
-          <input
-            type="text"
-            class="form-control"
-            name="subject"
-            id="subject"
-            placeholder="Subject"
-            data-rule="minlen:4"
-            data-msg="Please enter at least 8 chars of subject"
-          >
+          <div class="mb-3">
+            <div class="loading">Enviando</div>
 
-          <div class="validate"></div>
-        </div>
+            <div class="error-message"></div>
 
-        <div class="form-group">
-          <textarea
-            class="form-control"
-            name="message"
-            rows="5"
-            data-rule="required"
-            data-msg="Please write something for us"
-            placeholder="Message"
-          ></textarea>
-
-          <div class="validate"></div>
-        </div>
-
-        <div class="mb-3">
-          <div class="loading">Loading</div>
-
-          <div class="error-message"></div>
-
-          <div class="sent-message">
-            Your message has been sent. Thank you!
+            <div class="sent-message">
+              Your message has been sent. Thank you!
+            </div>
           </div>
-        </div>
 
-        <div class="text-center">
-          <button type="submit">Send Message</button>
-        </div>
-      </form>
+          <div class="text-center">
+            <button type="submit">Enviar Mensaje</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
-</div>
 </section>
