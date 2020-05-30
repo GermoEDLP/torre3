@@ -1,30 +1,21 @@
-<div class="col-lg-4 col-md-6 portfolio-item {{filter}}">
+<div class="col-lg-6 col-md-6 portfolio-item {{filter}}">
     <img
       [src]="hrefUrl"
       class="img-fluid"
       alt=""
     >
 
-    <div class="portfolio-info">
+    <div class="portfolio-info" >
       <h4>{{title}}</h4>
 
       <p>{{subtitle}}</p>
 
       <a
-        [href]="hrefUrl"
-        data-gall="portfolioGallery"
-        class="venobox preview-link"
-        [title]="title"
-      >
-        <i class="bx bx-plus"></i>
-      </a>
-
-      <a
-        href="portfolio-details.html"
+        [routerLink]="['/detail', pos]"
         class="details-link"
         title="Mas detalles"
       >
-        <i class="bx bx-link"></i>
+        <i class="bx bx-plus"></i>
       </a>
     </div>
   </div>

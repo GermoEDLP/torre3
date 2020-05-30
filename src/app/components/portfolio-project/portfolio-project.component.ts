@@ -12,6 +12,7 @@ export class PortfolioProjectComponent implements OnInit {
   @Input() subtitle: string;
   @Input() hrefUrl: string;
   @Input() filter: string;
+  @Input() pos: number;
 
 
   constructor() { }

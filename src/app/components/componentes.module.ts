@@ -15,6 +15,8 @@ import { TeamComponent } from './team/team.component';
 import { TopBarsComponent } from './top-bars/top-bars.component';
 import { CardsComponent } from './cards/cards.component';
 import { PortfolioProjectComponent } from './portfolio-project/portfolio-project.component';
+import { AppRoutingModule } from '../app-routing.module';
+import { RecaptchaModule } from 'ng-recaptcha';
 
 
 
@@ -35,7 +37,9 @@ import { PortfolioProjectComponent } from './portfolio-project/portfolio-project
     PortfolioProjectComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule,
+    RecaptchaModule
   ],
   exports: [
     AboutComponent,

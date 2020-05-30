@@ -8,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
+  valid: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public resolved(captchaResponse: string) {
+    if(captchaResponse != null){
+      this.valid = true;
+    }else{
+      this.valid = false;
+    }
   }
 
 }

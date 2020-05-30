@@ -9,6 +9,9 @@ import { ComponentesModule } from './components/componentes.module';
 import { HomeComponent } from './pages/home/home.component';
 import { DetailComponent } from './pages/detail/detail.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { RecaptchaModule } from 'ng-recaptcha';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +21,10 @@ import { DetailComponent } from './pages/detail/detail.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ComponentesModule
+    ComponentesModule,
+    HttpClientModule,
+    RecaptchaModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

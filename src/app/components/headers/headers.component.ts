@@ -9,6 +9,7 @@ import { $ } from 'protractor';
 })
 export class HeadersComponent implements OnInit {
 
+  recaptcha: any[];
 
   constructor() {
    
@@ -18,5 +19,6 @@ export class HeadersComponent implements OnInit {
   ngOnInit(): void {
     
   }
+
 
 }

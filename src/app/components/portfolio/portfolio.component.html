@@ -39,24 +39,14 @@
       data-aos-delay="150"
     >
       <app-portfolio-project
-        title="App 1"
-        subtitle="App"
-        hrefUrl="assets/img/portfolio/portfolio-1.jpg"
-        filter="filter-app"
+        *ngFor="let project of datas; let i = index"
+        [title]="project.title"
+        [subtitle]="project.subtitle"
+        hrefUrl="assets/img/portfolio/{{project.hrefUrl}}.jpg"
+        [filter]="project.filter"
+        [pos]="i"
       ></app-portfolio-project>
-      <app-portfolio-project
-        title="App 2"
-        subtitle="App"
-        hrefUrl="assets/img/portfolio/portfolio-2.jpg"
-        filter="filter-app"
-      ></app-portfolio-project>
-
-      <app-portfolio-project
-        title="Web 1"
-        subtitle="Web"
-        hrefUrl="assets/img/portfolio/portfolio-3.jpg"
-        filter="filter-web"
-      ></app-portfolio-project>
+    
 
     
     </div>
