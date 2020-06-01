@@ -11,7 +11,7 @@
     </div>
 
     <div class="row" data-aos="fade-up">
-      <div class="col-lg-6">
+      <div class="col-lg-6 col-md-6">
         <div class="info-box mb-6">
           <i class="bx bx-map"></i>
 
@@ -24,7 +24,7 @@
       </div>
 
       <div class="col-lg-6 col-md-6">
-        <div class="info-box mb-4">
+        <div class="info-box mb-6">
           <i class="bx bx-envelope"></i>
 
           <h3>Email</h3>
@@ -48,6 +48,7 @@
       </div>
 
       <div class="col-lg-6">
+
         <form class="php-email-form">
           <div class="form-row">
             <div class="col-md-6 form-group">
@@ -57,9 +58,11 @@
                 class="form-control"
                 id="name"
                 placeholder="Tu nombre"
-                data-rule="minlen:4"
-                data-msg="Por favor ingresa al menos 4 letras"
+                [(ngModel)]="name"
+                data-rule="minlen:4" data-msg="Por favor ingresa un nombre"
               />
+
+              
 
               <div class="validate"></div>
             </div>
@@ -71,8 +74,9 @@
                 name="email"
                 id="email"
                 placeholder="Tu Email"
-                data-rule="email"
-                data-msg="Por favor ingresa un mail valido"
+                [(ngModel)]="email"
+                required
+                data-rule="email" data-msg="Por favor ingresa un email valido"
               />
 
               <div class="validate"></div>
@@ -86,8 +90,8 @@
               name="subject"
               id="subject"
               placeholder="Asunto"
-              data-rule="minlen:4"
-              data-msg="Por favor ingresa, al menos, 8 letras"
+              [(ngModel)]="subject"
+              data-rule="minlen:4" data-msg="Por favor ingresa al menos 8 carácteres"
             />
 
             <div class="validate"></div>
@@ -101,33 +105,39 @@
               data-rule="required"
               data-msg="Déjanos algun mensaje"
               placeholder="Mensaje"
+              [(ngModel)]="message"
             ></textarea>
 
             
 
             <div class="validate"></div>
           </div>
-          
+          <div class="recaptcha">
             <re-captcha
             (resolved)="resolved($event)"
             siteKey="6LcGS_4UAAAAANIeLh3hft8K9SshK-BD38WDcbCr"
           ></re-captcha>
 
+          </div>
+            
           <div class="mb-3">
             <div class="loading">Enviando</div>
 
-            <div class="error-message"></div>
-
-            <div class="sent-message">
-              Your message has been sent. Thank you!
+            <div *ngIf="enviado" class="sent-message" style="display: block;">
+              Tu mensaje ha sido enviado. Muchas gracias!
+            </div>
+            <div *ngIf="error" class="sent-message" style="display: block;">
+              Ocurrio un error. Intentalo mas tarde!
             </div>
           </div>
 
           <div class="text-center">
-            <button type="submit" class="btn btn-success" [ngClass]="{disabled: !valid}">Enviar Mensaje</button>
+            <button class="btn btn-danger disabled" disabled *ngIf="!valid">Enviar Mensaje</button>
+            <button (click)="enviarMail()" class="btn btn-danger" *ngIf="valid">Enviar Mensaje</button>
           </div>
         </form>
       </div>
     </div>
   </div>
 </section>
+

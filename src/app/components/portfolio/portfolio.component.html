@@ -9,7 +9,7 @@
       <h2>Portfolio</h2>
 
       <p>
-        Aqui podrás ver nuestros últimos proyectos.
+        Aqui podrás ver las herramientas que uitlizamos y nuestros últimos proyectos.
       </p>
     </div>
 
@@ -42,7 +42,7 @@
         *ngFor="let project of datas; let i = index"
         [title]="project.title"
         [subtitle]="project.subtitle"
-        hrefUrl="assets/img/portfolio/{{project.hrefUrl}}.jpg"
+        hrefUrl="assets/img/portfolio/{{project.hrefUrl}}"
         [filter]="project.filter"
         [pos]="i"
       ></app-portfolio-project>

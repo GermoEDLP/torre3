@@ -17,6 +17,7 @@ import { CardsComponent } from './cards/cards.component';
 import { PortfolioProjectComponent } from './portfolio-project/portfolio-project.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { RecaptchaModule } from 'ng-recaptcha';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -39,7 +40,8 @@ import { RecaptchaModule } from 'ng-recaptcha';
   imports: [
     CommonModule,
     AppRoutingModule,
-    RecaptchaModule
+    RecaptchaModule,    
+    FormsModule
   ],
   exports: [
     AboutComponent,
