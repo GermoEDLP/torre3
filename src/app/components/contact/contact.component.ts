@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NgForm} from '@angular/forms';
 import { MailerService } from '../../services/mailer.service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -8,6 +9,8 @@ import { MailerService } from '../../services/mailer.service';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+
+  mail = environment.mail;
 
   valid: boolean = false;
   enviado: boolean = false;

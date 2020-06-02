@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { $ } from 'protractor';
 
+
+
 @Component({
   selector: 'app-headers',
   templateUrl: './headers.component.html',
@@ -9,6 +11,7 @@ import { $ } from 'protractor';
 })
 export class HeadersComponent implements OnInit {
 
+  
   recaptcha: any[];
 
   constructor() {

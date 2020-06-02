@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-top-bars',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class TopBarsComponent implements OnInit {
-
+  mail = environment.mail;
   constructor() { }
 
   ngOnInit(): void {

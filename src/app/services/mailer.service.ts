@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../environments/environment';
+import { getMaxListeners } from 'cluster';
 
 @Injectable({
   providedIn: 'root'
@@ -8,13 +10,15 @@ export class MailerService {
 
   private url: string = "https://us-central1-torretres-dev.cloudfunctions.net/mailer";
 
+  mails = environment.mails;
+
   constructor(private http: HttpClient) { }
 
 
   enviarMail(name: string, email: string, subject: string, message: string){
 
     let data = {
-      "to": "braian.indu06@gmail.com",
+      "to": this.mails,
       "message": `<h3>Este mensaje fue enviado desde la web:</h3>
       <ul>
         <li><b>Envía: </b>${name}</li>
